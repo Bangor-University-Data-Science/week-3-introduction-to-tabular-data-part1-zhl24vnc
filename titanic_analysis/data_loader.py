@@ -1,5 +1,13 @@
 import pandas as pd
 
 def load_titanic_data(filepath: str) -> pd.DataFrame:
-    """Load the Titanic dataset from a CSV file."""
-return pd.titanic_csv(filepath)
+    """
+    Loads the Titanic dataset from the specified file path.
+    
+    Args:
+        filepath (str): Path to the Titanic CSV file.
+    
+    Returns:
+        pd.DataFrame: Loaded Titanic dataset as a DataFrame.
+    """
+    return pd.read_csv(filepath)
