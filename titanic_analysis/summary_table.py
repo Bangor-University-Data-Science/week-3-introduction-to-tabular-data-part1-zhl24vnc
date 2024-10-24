@@ -1,3 +1,5 @@
+from titanic_analysis.summary_table import create_summary_table
+import pandas as pd
 def create_summary_table(df):
     """
     Creates a summary DataFrame with feature name, data type, number of unique values, and if it has missing values.
