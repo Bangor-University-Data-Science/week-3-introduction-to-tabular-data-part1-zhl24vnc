@@ -13,7 +13,7 @@ def create_summary_table(df: pd.DataFrame) -> pd.DataFrame:
     summary_data = []
     for column in df.columns:
         summary_data.append({
-            'Feature': column,
+            'Feature Name': column,
             'Data Type': df[column].dtype,
             'Unique Values': df[column].nunique(),
             'Missing Values': df[column].isnull().sum() > 0
