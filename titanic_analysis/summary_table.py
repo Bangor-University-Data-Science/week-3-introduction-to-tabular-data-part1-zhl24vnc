@@ -16,8 +16,8 @@ def create_summary_table(df):
         summary_data.append({
             'Feature Name': column,
             'Data Type': df[column].dtype,
-            'Unique Values': df[column].nunique(),
-            'Has Missing Values?': df[column].isnull().sum() > 0
+            'Number of Unique Values': df[column].nunique(),
+            'Has Missing Values?': df[column].isnull().sum() > 0 
         })
     
     return pd.DataFrame(summary_data)
