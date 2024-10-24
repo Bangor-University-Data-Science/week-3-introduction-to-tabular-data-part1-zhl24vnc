@@ -1,6 +1,5 @@
-     import os
-     import pandas as pd
-     import pytest
+import pandas as pd
+
      from titanic_analysis.data_loader import load_titanic_data
 
      def test_load_titanic_data():
