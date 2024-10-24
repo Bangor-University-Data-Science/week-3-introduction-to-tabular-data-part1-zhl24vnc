@@ -1,9 +1,11 @@
-def create_summary_table(df):
+import pandas as pd
+
+def create_summary_table(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Creates a summary DataFrame with feature name, data type, number of unique values, and if it has missing values.
+    Creates a summary table with feature names, data types, number of unique values, and missing value status.
     
     Args:
-        df (pd.DataFrame): The Titanic dataset as a DataFrame.
+        df (pd.DataFrame): The dataset to summarize.
     
     Returns:
         pd.DataFrame: A summary DataFrame.
@@ -14,7 +16,7 @@ def create_summary_table(df):
             'Feature': column,
             'Data Type': df[column].dtype,
             'Unique Values': df[column].nunique(),
-            'Has Missing Values': df[column].isnull().sum() > 0
+            'Missing Values': df[column].isnull().sum() > 0
         })
     
     return pd.DataFrame(summary_data)
